@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.popins {
+    font-family: var(--font-popins);
+}
+.inter {
+    font-family: var(--font-inter);
+}
