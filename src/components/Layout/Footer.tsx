@@ -15,12 +15,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-white py-10 pt-16">
                     <div className="col-span-2 bg-[#ebe6e609] p-4 rounded-xl">
                         <h1 className='font-semibold text-2xl pb-4'>Bizning jamoa haqida</h1>
-                        <div className='grid grid-cols-3 gap-6'>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
                             {
                                 [1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => {
                                     return (
                                         <div key={index}
-                                            className='grid grid-cols-1 lg:grid-cols-3 gap-2 cursor-pointer bg-[#e6d1d11e] p-2 rounded-xl hover:scale-102 duration-500 hover:shadow-[0_0_8px] hover:shadow-[#b6a5f1cb]'>
+                                            className='grid grid-cols-3 lg:grid-cols-3 gap-2 cursor-pointer bg-[#e6d1d11e] p-2 rounded-xl hover:scale-102 duration-500 hover:shadow-[0_0_8px] hover:shadow-[#b6a5f1cb]'>
                                             <div className='col-span-1'>
                                                 <Image
                                                     src={user}

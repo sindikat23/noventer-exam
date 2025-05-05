@@ -22,7 +22,7 @@ const Navbar = () => {
                     <li className='hover:scale-105 duration-300 cursor-pointer'>Aloqa</li>
                 </ul>
                 <div className='hidden lg:flex items-center gap-4'>
-                    <select name="lang" className='font-medium p-2 bg-transparent border border-white rounded-md'>
+                    <select name="lang" className='font-medium p-2 bg-transparent border border-none rounded-md'>
                         <option value="uz">UZB</option>
                         <option value="en">ENG</option>
                     </select>

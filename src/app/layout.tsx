@@ -44,7 +44,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="relative">
-          <div className="sticky z-1 top-0">
+          <div className="sticky z-100 top-0">
             <Navbar/>
           </div>
           <div>
