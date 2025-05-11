@@ -4,8 +4,11 @@ import React from 'react'
 
 import shl1 from '@/assets/images/Service-page-image/shl1.svg'
 import dec_s from '@/assets/icon/b2.svg'
+import { useTranslations } from 'next-intl'
 
 const ServiceEcom = () => {
+    const t = useTranslations('Service-Landing')
+    const e = useTranslations('Service-Ecom')
     return (
         <div className=''>
             <section className="container mx-auto py-10 px-5 md:px-16 text-white">
@@ -19,14 +22,14 @@ const ServiceEcom = () => {
                         />
                     </div>
                     <div className="w-full md:w-2/3 p-8 md:p-10 inter">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">eCommerce Sahifalari</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{e('title')}</h2>
                         <ul className="space-y-6 mb-6 grid grid-cols-1 lg:grid-cols-2 ">
                             <li className="flex items-start jus gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Onlayn sotish</p>
+                                    <p className="font-semibold">{e('min-title1')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60  ">
-                                        Mijozlarga tovarlarni to&apos;g&apos;ridan-to&apos;g&apos;ri onlayn sotib olish imkoniyatini beradi.
+                                    {e('min-desc1')}
                                     </p>
                                 </div>
                             </li>
@@ -34,9 +37,9 @@ const ServiceEcom = () => {
                             <li className="flex items-start gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Xavfsiz to&#39;lov</p>
+                                    <p className="font-semibold">{e('min-title2')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Turli xil xavfsiz to&apos;lov usullarini qo&apos;llab-quvvatlaydi.
+                                    {e('min-desc2')}
                                     </p>
                                 </div>
                             </li>
@@ -44,9 +47,9 @@ const ServiceEcom = () => {
                             <li className="flex items-start gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Yetkazib berish</p>
+                                    <p className="font-semibold">{e('min-title3')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Mijozlarga buyurtmalarni tez va qulay tarzda yetkazib berish xizmatini taqdim etadi
+                                    {e('min-title3')}
                                     </p>
                                 </div>
                             </li>
@@ -54,13 +57,13 @@ const ServiceEcom = () => {
 
 
                         <div className="text-sm text-gray-300 mb-4">
-                            <p>Texnik vazifa tayyorlab berish: <b>3-4 kun</b></p>
-                            <p>Sayt sahifalar soni: har bir sahifa minimum 5 ta qismdan iborat bo&apos;ladi.</p>
-                            <p>Veb Dizayn: <b>7-10 kun mehnat. Narxi: $200-300</b></p>
+                            <p>{e('service-p')} <b>3-4 {e('ser-day')}</b></p>
+                            <p>{e('service-p2')} {e('service-p3')}</p>
+                            <p>{e('service-p4')} <b>{e('service-b4')}</b></p>
                         </div>
 
                         <Button type='primary' color='geekblue' className="md:mt-10 hidden md:inline-flex glass text-white px-3 py-1">
-                            Buyurtma berish
+                        {e('ser-btn')}
                         </Button>
                     </div>
                     <div className="w-full md:w-1/3 object-cover flex items-center justify-center bg-white/5">

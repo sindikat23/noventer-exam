@@ -6,8 +6,10 @@ import icon1 from '@/assets/icon/v1.svg'
 import icon2 from '@/assets/icon/v2.svg'
 import icon3 from '@/assets/icon/v3.svg'
 import icon4 from '@/assets/icon/v4.svg'
+import { useTranslations } from 'next-intl'
 
 const MainHeader = () => {
+      const t = useTranslations('Main-Header');
     return (
         <div className="container mx-auto pt-4 text-white overflow-hidden">
             <div className="relative  text-white pt-20">
@@ -21,12 +23,12 @@ const MainHeader = () => {
                         <div className="lg:w-3/7 text-center lg:text-left lg:pb-30">
                             <div className=''>
                                 <h2 className="text-4xl lg:text-[42px] font-bold leading-tight inter">
-                                    Yuqori sifatdagi <br />
-                                    <span className="font-light">aniqlikka asoslanib</span> <br />
-                                    <span className="text-[#5A00DB]">istalgan turdagi</span> <br />
-                                    dasturlarni tayyorlaymiz
+                                    {t('main-title')} <br />
+                                    <span className="font-light">{t('main-title2')}</span> <br />
+                                    <span className="text-[#5A00DB]">{t('main-title3')}</span> <br />
+                                    {t('main-title4')}
                                 </h2>
-                                <Button type='primary' size='large' className='mt-4'>Xizmatlar haqida</Button>
+                                <Button type='primary' size='large' className='mt-4'>{t('header-btn')}</Button>
                             </div>
                         </div>
 
@@ -44,8 +46,8 @@ const MainHeader = () => {
                                     <Image src={icon1} alt="statistika" />
                                 </div>
                                 <div>
-                                    <p className="text-2xl font-bold">7+ yillik</p>
-                                    <p className="text-gray-300">Umumiy tajriba</p>
+                                    <p className="text-2xl font-bold">7+ {t('header-service1')}</p>
+                                    <p className="text-gray-300">{t('header-service')}</p>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +58,7 @@ const MainHeader = () => {
                                 </div>
                                 <div>
                                     <p className="text-2xl font-bold">5+</p>
-                                    <p className="text-gray-300">Yirik loyihalar</p>
+                                    <p className="text-gray-300">{t('header-service2')}</p>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +69,7 @@ const MainHeader = () => {
                                 </div>
                                 <div>
                                     <p className="text-2xl font-bold">8+</p>
-                                    <p className="text-gray-300">Xizmat turlari</p>
+                                    <p className="text-gray-300">{t('header-service3')}</p>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +80,7 @@ const MainHeader = () => {
                                 </div>
                                 <div>
                                     <p className="text-2xl font-bold">100%</p>
-                                    <p className="text-gray-300">Xavfsizlik</p>
+                                    <p className="text-gray-300">{t('header-service4')}</p>
                                 </div>
                             </div>
                         </div>

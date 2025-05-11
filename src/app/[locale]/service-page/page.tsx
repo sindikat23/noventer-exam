@@ -6,7 +6,7 @@ import ServiceHeader from '@/components/Services-page/ServiceHeader'
 import ServiceLanding from '@/components/Services-page/ServiceLanding'
 import React from 'react'
 
-const page = () => {
+const ServicePage = () => {
   return (
     <div className='bg-[#0E041D]'>
       <ServiceHeader/>
@@ -21,4 +21,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ServicePage

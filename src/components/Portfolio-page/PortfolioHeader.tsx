@@ -2,17 +2,19 @@ import Image from "next/image"
 import p1 from '@/assets/images/Portfolio-page-image/p1.svg'
 import p2 from '@/assets/images/Portfolio-page-image/p2.svg'
 import p3 from '@/assets/images/Portfolio-page-image/p3.svg'
+import { useTranslations } from "next-intl"
 
 const PortfolioHeader = () => {
+            const t = useTranslations('Portfolio-page')
     return (
         <div className="">
             <div className="container mx-auto text-white py-10 px-5 md:px-20 flex flex-col md:flex-row items-center justify-between min-h-[40vh] relative">
                 <div className="max-w-xl text-center md:text-left z-10">
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight inter">
-                        Tajribamiz davomida <br />
-                        <span className="font-light">turli xil hajmdagi</span> <br />
-                        <span className="text-purple-500">IT loyihalarini</span> <br />
-                        ishga tushira oldik
+                        {t('portfolio-title1')} <br />
+                        <span className="font-light">{t('portfolio-title2')}</span> <br />
+                        <span className="text-purple-500">{t('portfolio-title3')}</span> <br />
+                        {t('portfolio-title4')}
                     </h1>
                 </div>
 

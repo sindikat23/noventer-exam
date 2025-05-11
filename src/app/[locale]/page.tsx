@@ -5,7 +5,6 @@ import MainProjects from "@/components/Main-page/MainProjects";
 import MainServices from "@/components/Main-page/MainServices";
 
 export default function Home() {
-
   return (
     <div className="bg-[#0E041D] inter">
       <MainHeader/>

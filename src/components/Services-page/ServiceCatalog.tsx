@@ -4,8 +4,11 @@ import React from 'react'
 
 import shl1 from '@/assets/images/Service-page-image/shl1.svg'
 import dec_s from '@/assets/icon/b1.svg'
+import { useTranslations } from 'next-intl'
 
 const ServiceCatalog = () => {
+        const t = useTranslations('Service-Landing')
+        const k = useTranslations('Service-Catalog')
     return (
         <div className=''>
             <section className="container mx-auto py-10 px-5 md:px-16 text-white">
@@ -19,14 +22,14 @@ const ServiceCatalog = () => {
                         />
                     </div>
                     <div className="w-full md:w-2/3 p-8 md:p-10 inter">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Katalog sahifalari</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{k('title')}</h2>
                         <ul className="space-y-6 mb-6 grid grid-cols-1 lg:grid-cols-2 ">
                             <li className="flex items-start jus gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Mahsulotlar tavsifi</p>
+                                    <p className="font-semibold">{k('min-title1')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60  ">
-                                        Har bir mahsulotning batafsil tavsifi, xususiyatlari, afzalliklari va rasmlari bilan berilgan.
+                                    {k('min-desc1')}
                                     </p>
                                 </div>
                             </li>
@@ -34,9 +37,9 @@ const ServiceCatalog = () => {
                             <li className="flex items-start gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Turli filtrlar</p>
+                                    <p className="font-semibold">{k('min-title2')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Mijozlarning qidirishni osonlashtirish uchun turli xil filtrlar va saralash imkoniyatlari taqdim etiladi.
+                                    {k('min-desc2')}
                                     </p>
                                 </div>
                             </li>
@@ -44,9 +47,9 @@ const ServiceCatalog = () => {
                             <li className="flex items-start gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Navigatsiya</p>
+                                    <p className="font-semibold">{k('min-title3')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Katalog bo&apos;ylab oson va intuitiv harakatlanish uchun qulay navigatsiya tizimi yaratilgan
+                                    {k('min-desc3')}
                                     </p>
                                 </div>
                             </li>
@@ -54,13 +57,13 @@ const ServiceCatalog = () => {
 
 
                         <div className="text-sm text-gray-300 mb-4">
-                            <p>Texnik vazifa tayyorlab berish: <b>1 kun</b></p>
-                            <p>Sayt sahifalar soni: <b>1</b> (har bir sahifa minimum 5 ta qismdan iborat bo&apos;ladi.)</p>
-                            <p>Veb Dizayn: <b>10-15 soatlik mehnat. Narxi: $100</b></p>
+                            <p>{k('service-p')} <b>1 {t('ser-day')}</b></p>
+                            <p>{k('service-p2')} <b>1</b> {k('service-p3')}</p>
+                            <p>{k('service-p4')} <b>{k('service-b4')}</b></p>
                         </div>
 
                         <Button type='primary' color='geekblue' className="md:mt-10 hidden md:inline-flex glass text-white px-3 py-1">
-                            Buyurtma berish
+                        {t('ser-btn')}
                         </Button>
                     </div>
                     <div className="w-full md:w-1/3 object-cover flex items-center justify-center bg-white/5">

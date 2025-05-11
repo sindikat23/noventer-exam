@@ -2,18 +2,20 @@ import Image from "next/image"
 import sh1 from '@/assets/images/Service-page-image/sh2.svg'
 import sh2 from '@/assets/images/Service-page-image/sh1.svg'
 import sh3 from '@/assets/images/Service-page-image/sh3.svg'
+import { useTranslations } from "next-intl"
 
 
 const ServiceHeader = () => {
+    const t = useTranslations('Service-page')
     return (
         <div className="">
             <div className="container mx-auto text-white py-10 px-5 md:px-20 flex flex-col md:flex-row items-center justify-between min-h-[40vh] relative">
                 <div className="max-w-xl text-center md:text-left z-10">
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight inter">
-                        Har bir xizmat turini <br />
-                        <span className="font-light">har bir mijoz uchun</span> <br />
-                        <span className="text-purple-500">alohida ahamiyatli</span> <br />
-                        deb yondoshamiz&nbsp;!
+                        {t('servic-title1')} <br />
+                        <span className="font-light">{t('servic-title2')}</span> <br />
+                        <span className="text-purple-500">{t('servic-title3')}</span> <br />
+                        {t('servic-title4')}
                     </h1>
                 </div>
 

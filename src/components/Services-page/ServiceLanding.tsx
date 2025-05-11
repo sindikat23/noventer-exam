@@ -4,7 +4,9 @@ import { Button } from 'antd'
 
 import shl1 from '@/assets/images/Service-page-image/shl1.svg'
 import dec_s from '@/assets/icon/b3.svg'
+import { useTranslations } from 'next-intl'
 const ServiceLanding = () => {
+    const t = useTranslations('Service-Landing')
     return (
         <div className=''>
             <section className="container mx-auto py-10 px-5 md:px-16 text-white">
@@ -18,34 +20,34 @@ const ServiceLanding = () => {
                         />
                     </div>
                     <div className="w-full md:w-2/3 p-8 md:p-10 inter">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Landing sahifalar</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('title')}</h2>
                         <ul className="space-y-6 mb-6 grid grid-cols-1 lg:grid-cols-2 ">
                             <li className="flex items-start jus gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Qisqa va ta&apos;sirli</p>
+                                    <p className="font-semibold">{t('min-title1')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60  ">
-                                        Mijozni birinchi qarashda qiziqtiradigan va keyingi qadamga undaydigan muhim ma&apos;lumotlarni taqdim etadi.
+                                        {t('min-desc1')}
                                     </p>
                                 </div>
                             </li>
 
                             <li className="flex items-start gap-3">
-                            <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
+                                <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Maqsadli</p>
+                                    <p className="font-semibold">{t('min-title2')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Aniq maqsadga yo&apos;naltirilgan bo&apos;lib, mijozni maxsus harakatga undashga xizmat qiladi.
+                                        {t('min-desc2')}
                                     </p>
                                 </div>
                             </li>
 
                             <li className="flex items-start gap-3">
-                            <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
+                                <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Tez yuklanuvchi</p>
+                                    <p className="font-semibold">{t('min-title3')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Mijozlarning sabr-toqatiga ta&apos;sir qilmaslik uchun iloji boricha tez yuklanadi.
+                                        {t('min-desc3')}
                                     </p>
                                 </div>
                             </li>
@@ -53,13 +55,13 @@ const ServiceLanding = () => {
 
 
                         <div className="text-sm text-gray-300 mb-4">
-                            <p>Texnik vazifa tayyorlab berish: <b>1 kun</b></p>
-                            <p>Sayt sahifalar soni: <b>1</b> (har bir sahifa minimum 5 ta qismdan iborat bo&apos;ladi.)</p>
-                            <p>Veb Dizayn: <b>10-15 soatlik mehnat.</b></p>
+                            <p>{t('service-p')} <b>1 {t('ser-day')}</b></p>
+                            <p>{t('service-p2')} <b>1</b> {t('service-p3')}</p>
+                            <p>{t('service-p4')} <b>{t('service-b4')}</b></p>
                         </div>
 
                         <Button type='primary' color='geekblue' className="md:mt-10 hidden md:inline-flex glass text-white px-3 py-1">
-                            Buyurtma berish
+                            {t('ser-btn')}
                         </Button>
                     </div>
                     <div className="w-full md:w-1/3 object-cover flex items-center justify-center bg-white/5">

@@ -4,8 +4,10 @@ import React from 'react'
 
 import shl1 from '@/assets/images/Service-page-image/shl1.svg'
 import dec_s from '@/assets/icon/b8.svg'
+import { useTranslations } from 'next-intl'
 
 const ServiceCRM = () => {
+    const t = useTranslations('Service-CRM')
     return (
         <div className=''>
             <section className="container mx-auto py-10 px-5 md:px-16 text-white">
@@ -19,14 +21,14 @@ const ServiceCRM = () => {
                         />
                     </div>
                     <div className="w-full md:w-2/3 p-8 md:p-10 inter">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">CRM Sahifalari</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('title')}</h2>
                         <ul className="space-y-6 mb-6 grid grid-cols-1 lg:grid-cols-2 ">
                             <li className="flex items-start jus gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Mijozlar ma&#39;lumotlari</p>
+                                    <p className="font-semibold">{t('min-title1')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60  ">
-                                        Mijozlar haqida muhim ma&#39;lumotlarni to&#39;plash va saqlash uchun mo&#39;ljallangan.
+                                    {t('min-desc1')}
                                     </p>
                                 </div>
                             </li>
@@ -34,9 +36,9 @@ const ServiceCRM = () => {
                             <li className="flex items-start gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Mijozlar bilan muloqot</p>
+                                    <p className="font-semibold">{t('min-title2')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Mijozlar bilan samarali aloqa o&#39;rnatish va ularni qo&#39;llab-quvvatlashga imkon beradi.
+                                    {t('min-desc2')}
                                     </p>
                                 </div>
                             </li>
@@ -44,9 +46,9 @@ const ServiceCRM = () => {
                             <li className="flex items-start gap-3">
                                 <div className='px-2 pt-4 mt-1 bg-white rounded-[5px]'></div>
                                 <div>
-                                    <p className="font-semibold">Tahlil</p>
+                                    <p className="font-semibold">{t('min-title3')}</p>
                                     <p className="text-sm text-gray-300 lg:w-60">
-                                        Mijozlar haqida to&#39;plangan ma&#39;lumotlarni tahlil qilish va qarorlar qabul qilishga yordam beradi.
+                                    {t('min-desc3')}
                                     </p>
                                 </div>
                             </li>
@@ -54,13 +56,13 @@ const ServiceCRM = () => {
 
 
                         <div className="text-sm text-gray-300 mb-4">
-                            <p>Texnik vazifa tayyorlab berish: <b>5-10 kun</b></p>
-                            <p>Sayt sahifalar soni: <b>10 yoki undan yuqori</b></p>
-                            <p>Veb Dizayn: <b>7-10 kun mehnat. Narxi: $300-500</b></p>
+                            <p>{t('service-p')} <b>5-10 {t('ser-day')}</b></p>
+                            <p>{t('service-p2')} <b>{t('service-p3')}</b></p>
+                            <p>{t('service-p4')}: <b>{t('service-b4')}</b></p>
                         </div>
 
                         <Button type='primary' color='geekblue' className="md:mt-10 hidden md:inline-flex glass text-white px-3 py-1">
-                            Buyurtma berish
+                        {t('ser-btn')}
                         </Button>
                     </div>
                     <div className="w-full md:w-1/3 object-cover flex items-center justify-center bg-white/5">
