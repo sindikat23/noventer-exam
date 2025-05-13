@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
 const MainHeader = () => {
       const t = useTranslations('Main-Header');
     return (
-        <div className="container mx-auto pt-4 text-white overflow-hidden">
+        <div className="container mx-auto pt-4 text-white overflow-hidden px-2">
             <div className="relative  text-white pt-20">
                 <div>
                     <div className="absolute inset-0 flex justify-center items-center -z-10">
